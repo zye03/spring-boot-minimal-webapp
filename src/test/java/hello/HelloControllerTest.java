@@ -26,6 +26,6 @@ public class HelloControllerTest {
     public void getHello() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("Greetings from Spring Boot!")));
+                .andExpect(content().string(equalTo("<h1>Hello World!</h1>\n<p>This web app is powered by \n<a href='https://github.com/zye03/spring-boot-minimal-webapp'>this github repo</a></p>\n")));
     }
 }
